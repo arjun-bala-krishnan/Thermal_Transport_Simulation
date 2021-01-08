@@ -1,0 +1,8 @@
+Serial code in fortran:
+gfortran -o out data_kind.f90 functions.f90 Fortran_code.f90
+Serial code in C++:
+g++ serial_code.cpp -o out -std=c++11 `gsl-config --cflags --libs`
+
+Parallel Code in C++:
+mpic++ parallel_code.cpp -o out -std=c++11 `gsl-config --cflags --libs`
+mpiexec -n 4 out
